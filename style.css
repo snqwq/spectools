@@ -86,6 +86,28 @@ a:hover {
   color: var(--primary);
 }
 
+.top-bar {
+  outline: var(--accent) 1px solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.card {
+  background: var(--background);
+  /* border-radius: 10px; */
+  width: 300px;
+  height: 450px;
+  display: flexbox;
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
+  outline: var(--accent) 1px solid;
+}
+
 .title-404 {
   font-family: "Rubik Glitch";
   color: var(--text);
