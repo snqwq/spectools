@@ -71,6 +71,17 @@ small {
   font-size: 0.75rem; /* 12px */
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff00ff;
+  transition: color 0.3s;
+}
+
 .purple {
   color: var(--primary);
 }
@@ -78,4 +89,13 @@ small {
 .title-404 {
   font-family: "Rubik Glitch";
   color: var(--text);
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  overflow: hidden;
 }
