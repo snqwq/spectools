@@ -1,5 +1,5 @@
-const canvas = document.getElementById("info-canvas");
-const gl = canvas.getContext("experimental-webgl");
+// const canvas = document.getElementById("info-canvas");
+// const gl = canvas.getContext("experimental-webgl");
 
 const vendorElement = document.getElementById("");
 
