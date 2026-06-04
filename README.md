@@ -1,5 +1,15 @@
 # spectools
 
+Quick and easy hardware specs in your browser
+
+(add hero image here)
+
+[demo](https://spectools.snyeg.dev)
+
+## Quick start
+
+## Features
+
 ## Goals
 
 ### v1.0 (first release i ship)
@@ -20,3 +30,8 @@
 - [ ] leaderboard + score system
 - [ ] easter eggs or minigames
 - [ ] keyboard tester
+
+## How it works
+
+
+## Credits
