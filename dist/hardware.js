@@ -1,3 +1,5 @@
+
+
 // setup invisible canvas with webgl
 const canvas = document.getElementById("info-canvas");
 const gl = canvas.getContext("webgl");
@@ -6,6 +8,8 @@ const gl = canvas.getContext("webgl");
 const vendorElement = document.getElementById("GPU-vendor");
 const rendererElement = document.getElementById("GPU-renderer");
 const OSElement = document.getElementById("OS-type");
+const browserElement = document.getElementById("browser-type");
+
 
 const platform = parsePlatform();
 const vendor = parseVendor(getUnmaskedInfo(gl).vendor);
@@ -16,12 +20,12 @@ vendorElement.textContent = "Vendor: " + vendor;
 rendererElement.textContent = "GPU: " + renderer;
 OSElement.textContent = "OS: " + platform;
 
-// console.log(getUnmaskedInfo(gl));
-console.log(parseVendor(getUnmaskedInfo(gl).vendor));
-// console.log(navigator.gpu);
-console.log(getUnmaskedInfo(gl).renderer);
 console.log(navigator.deviceMemory);
 console.log(navigator.hardwareConcurrency);
+
+console.log(window.navigator.vendor)
+console.log(window.navigator.userAgentData)
+console.log(navigator.appName)
 
 function getUnmaskedInfo(gl) {
   let unMaskedInfo = {
@@ -59,7 +63,7 @@ function parsePlatform() {
   if (navigator.platform == "Win32") {
     platform = "Windows";
   } else if (navigator.platform == "MacIntel") {
-    platform = "Mac OS (Intel)";
+    platform = "Mac OS";
   } else if (navigator.platform == "Linux x86_64") {
     platform = "Linux (x86_64)";
   } else if (navigator.platform == "Linux armv81") {
