@@ -1,5 +1,3 @@
-
-
 // setup invisible canvas with webgl
 const canvas = document.getElementById("info-canvas");
 const gl = canvas.getContext("webgl");
@@ -7,25 +5,27 @@ const gl = canvas.getContext("webgl");
 // get elements
 const vendorElement = document.getElementById("GPU-vendor");
 const rendererElement = document.getElementById("GPU-renderer");
+const ramElement = document.getElementById("RAM-total");
 const OSElement = document.getElementById("OS-type");
 const browserElement = document.getElementById("browser-type");
 
-
-const platform = parsePlatform();
+const platform = getPlatformInfo();
 const vendor = parseVendor(getUnmaskedInfo(gl).vendor);
 const renderer = parseRenderer(getUnmaskedInfo(gl).renderer);
 
 // update ui with values
 vendorElement.textContent = "Vendor: " + vendor;
 rendererElement.textContent = "GPU: " + renderer;
+
+ramElement.textContent = "Total (GB): " + navigator.deviceMemory;
+
 OSElement.textContent = "OS: " + platform;
 
 console.log(navigator.deviceMemory);
 console.log(navigator.hardwareConcurrency);
 
-console.log(window.navigator.vendor)
-console.log(window.navigator.userAgentData)
-console.log(navigator.appName)
+console.log(window.navigator.vendor);
+console.log(window.navigator.userAgentData);
 
 function getUnmaskedInfo(gl) {
   let unMaskedInfo = {
@@ -57,7 +57,7 @@ function parseRenderer(unMaskedVendor) {
   return unMaskedVendor;
 }
 
-function parsePlatform() {
+function getPlatformInfo() {
   let platform = "";
 
   if (navigator.platform == "Win32") {
